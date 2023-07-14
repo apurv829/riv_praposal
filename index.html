@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Proposal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    body {
+    background: #212529;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">Will you be my Girlfreind again🤞?</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4">You are not only my love of my life but also my best friend. I want to spend every moment with you. I promise to cherish and adore you every day, to celebrate your successes and lift you up in times of need. I promise to be your partner, and your safe haven. Together, we will navigate the joys and challenges of life, hand in hand, with  love and dedication. So, Will you stay with me now and always ?</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href = "love.html"><button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">YES</button></a>
+        <a href = "riv.html"><button class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold" id='runaway-btn'>😘</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+ <script>
+   const button = document.getElementById("runaway-btn");
+    const animateMove = (element, prop, pixels) =>
+      anime({
+        targets: element,
+        [prop]: `${pixels}px`,
+        easing: "easeOutCirc"
+      });
+      ["mouseover", "click"].forEach(function (el) {
+      button.addEventListener(el, function (event) {
+      const top = getRandomNumber(window.innerHeight - this.offsetHeight);
+      const left = getRandomNumber(window.innerWidth - this.offsetWidth);
+
+      animateMove(this, "left", left).play();
+      animateMove(this, "top", top).play();
+  });
+});
+
+     const getRandomNumber = (num) => {
+     return Math.floor(Math.random() * (num + 1));
+};
+ </script>
+</body>
+
+</html>
